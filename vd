@@ -1,0 +1,7 @@
+#Ngon ngu python
+print("Xin Chao cac ban")
+print("---------------------------------------------------")
+a=10
+b=20
+c=a+b
+print("tong la:",c)
