@@ -32,7 +32,7 @@ panel.image = img1
 # vị trí tọa độ của bức ảnh
 panel.place(x = 0, y = 0)
 # dòng code 35, 36 phát hiện khuôn mặt
-cascPath = "haarcascade/haarcascade_frontalface_default.xml"
+cascPath = "haarcascade_frontalface_default.xml"
 detector  = cv2.CascadeClassifier(cascPath)
 #fontface, fontscale, fontcolor là kiểu chữ, kích cỡ, màu sắc của chữ lúc hiển thị nhãn nhận dạng
 fontface = cv2.FONT_HERSHEY_SIMPLEX
@@ -65,7 +65,7 @@ def getImagesAndLabels(path):
     return IDs, faces
 # hàm tạo kết nối và truy vấn vào bảng FaceDB trong csdl để lấy id và tên
 def getProfile(id):
-    conn=sqlite3.connect("data_sql/FaceDB.db")
+    conn=sqlite3.connect("FaceDB.db")
     cmd="SELECT * FROM Facedata WHERE ID="+str(id)
     cursor=conn.execute(cmd)
     profile=None
